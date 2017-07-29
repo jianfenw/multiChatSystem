@@ -1,6 +1,8 @@
 # multiChatSystem
 
-The project is aimed to implement a online chat system which can support multi-user chat room. In a single chat room, each user can type his words and receive messages from all other users.
+The project is aimed to implement a online chat system which can support multi-user chat room. <br>
+
+In a single chat room, each user can type his words and receive messages from all other users.
 
 # Tips
 ## Test your server
@@ -30,5 +32,5 @@ kill -9 PID
 You can kill the program with your hand!
 
 #
-Please `Star` this project if you find it interesting and helpful
+Please `Star` this project if you find it interesting and helpful<br>
 copyright@jwangee
