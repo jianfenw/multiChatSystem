@@ -5,6 +5,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(SOURCE_FILES
     CMakeLists.txt
-    main.cpp)
+    main.cpp client.cpp)
 
-add_executable(multiChatSystem ${SOURCE_FILES})
+add_executable(server main.cpp)
+add_executable(client client.cpp)

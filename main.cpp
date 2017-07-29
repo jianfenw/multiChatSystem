@@ -17,6 +17,7 @@ int main() {
     std::cout << "Hello, World!" << std::endl;
 
     std::cout << AF_INET << std::endl;
+    std::cout << SOCK_STREAM << std::endl;
     std::cout << SOCK_DGRAM << std::endl;
     std::cout << INADDR_ANY << std::endl;
 
