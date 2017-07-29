@@ -36,7 +36,12 @@ int connect_to_server();
 
 int main(int argc, char const *argv[]){
     int client_fd = 0;
+    int bytes = 0;
     char send_buf[MAXBUFFERSIZE], recv_buf[MAXBUFFERSIZE];
+
+    strncpy(send_buf, argv[1], strlen(argv[1]));
+    send_buf[strlen(argv[1])] = '\0';
+    std::cout << send_buf << " " << strlen(send_buf) << " " << sizeof(send_buf) << std::endl;
 
     std::cout << "The client is up and running\n" << std::endl;
 
@@ -46,6 +51,17 @@ int main(int argc, char const *argv[]){
         fprintf(stderr, "Error: connection failed\n");
         exit(1);
     }
+
+    bytes = send(client_fd, send_buf, strlen(send_buf), 0);
+    if (bytes == -1){
+        close(client_fd);
+        perror("Error: send");
+        exit(1);
+    }
+    else{
+        std::cout << bytes << std::endl;
+    }
+
 
     close(client_fd);
 
@@ -58,7 +74,7 @@ int connect_to_server(){
     struct addrinfo *res, *p;
 
     memset(&hints, 0, sizeof(hints));
-    hints.ai_family = AF_UNSPEC;
+    hints.ai_family = AF_INET;
     hints.ai_socktype = SOCK_STREAM;
     hints.ai_flags = AI_PASSIVE;
 
@@ -69,6 +85,7 @@ int connect_to_server(){
     for (p=res; p != NULL; p = p->ai_next){
         void *addr;
         char *ipver;
+        std::cout << p->ai_family << " " << AF_INET << std::endl;
         if (p->ai_family == AF_INET){
             struct sockaddr_in *ipv4 = (struct sockaddr_in *)p->ai_addr;
             addr = &(ipv4->sin_addr);

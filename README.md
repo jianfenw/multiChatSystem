@@ -19,5 +19,15 @@ This command allows you to communicate with the server at the host defined by ip
 
 Type ctrl + ] to enter the telnet configuration page and type 'q' to quit the telnet program
 
+4. Manage the port number
+
+lsof -i:"port-number"
+
+This commend will list the process which uses the port number
+
+kill -9 PID
+
+You can kill the program with your hand!
+
 # Please Star this project if you find it interesting and helpful
 copyright@jwangee
