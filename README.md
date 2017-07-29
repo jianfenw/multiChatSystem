@@ -1,6 +1,6 @@
 # multiChatSystem
 
-The project is aimed to implement a online chat system which can support multi-user chat room. <br>
+The project is aimed to implement a online chat system which can support multi-user chat room.
 
 In a single chat room, each user can type his words and receive messages from all other users.
 
@@ -33,4 +33,5 @@ You can kill the program with your hand!
 
 #
 Please `Star` this project if you find it interesting and helpful<br>
-copyright@jwangee
+[My Personal Page}(http://jwangee.github.io "jwangee")
+copyright@jwangee<br>
