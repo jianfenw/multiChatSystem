@@ -29,5 +29,6 @@ kill -9 PID
 
 You can kill the program with your hand!
 
-# Please `Star` this project if you find it interesting and helpful
+#
+Please `Star` this project if you find it interesting and helpful
 copyright@jwangee
